@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / cobertura 
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Variáveis de ambiente
+.env
+.env.*.local
+
+# IDE/Editor
+.vscode/
+.idea/
+*.iml
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Outros
+*.log
