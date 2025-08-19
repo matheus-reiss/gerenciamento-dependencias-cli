@@ -6,11 +6,16 @@ Consome a API pública **Mocki**  ([endpoint](https://mocki.io/v1/d9180db7-b6b3-
 
 ##  Construído com
 **Ambiente de execução e gerenciador de pacotes**
+
 - Node.js 18+, npm
+
 **Dependências de execução**
+
 - axios — requisições HTTP
 - chalk — cores no terminal
+
 **Dependências de desenvolvimento (build)**
+
 - esbuild — bundle `dist/bundle.js`
 
 
@@ -70,7 +75,7 @@ Executar o artefato final:
 Para trocar a fonte de dados, altere a constante API_URL em src/index.js.
 
 **Saida esperada**
-```json
+```text
 Iniciando consumo da API (Mocki) 
 ⬇️  Tarefas:
 - Estudar Banco de dados [❌ Pendente]
