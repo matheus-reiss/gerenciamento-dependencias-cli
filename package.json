@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/bundle.js",
-    "run:dist": "node dist/bundle.js"
+    "build": "esbuild src/index.js --bundle --platform=node --format=cjs --outfile=dist/bundle.cjs",
+    "run:dist": "node dist/bundle.cjs"
   },
   "keywords": [],
   "author": "",
