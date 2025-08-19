@@ -2,6 +2,7 @@
   "name": "gerenciamento-de-dependencias",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js",
     "build": "esbuild src/index.js --bundle --platform=node --outfile=dist/bundle.js",
