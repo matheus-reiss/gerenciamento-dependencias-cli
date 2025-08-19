@@ -49,6 +49,12 @@ Executar
   npm start
 ```
 
+Opção Status(concluida | pendente)
+
+```bash
+  npm start -- --status=concluida
+  npm start --status=concluida
+```
 
 Build (artefato)
 
