@@ -2,11 +2,11 @@ import axios from "axios";
 import chalk from "chalk";
 import { writeFileSync } from "node:fs";
 
-const API_URL = "https://mocki.io/v1/e3016b7c-0966-47a8-9bc5-514daacfbd93";
+export const API_URL = "https://mocki.io/v1/e3016b7c-0966-47a8-9bc5-514daacfbd93";
 
-async function main() {
+export async function main(apiUrl = API_URL) {
     console.log(chalk.blue("Iniciando consumo da API (Mocki) "));
-    const { data } = await axios.get(API_URL, { timeout: 10000 });
+    const { data } = await axios.get(apiUrl, { timeout: 10000 });
     if (!Array.isArray(data)) throw new Error("Resposta inesperada da API (esperado um array).");
 
     console.log(chalk.yellow("⬇️  Tarefas:"));
@@ -19,6 +19,10 @@ async function main() {
     console.log(chalk.magenta("\n Arquivo salvo em output.json"));
 }
 
-main().catch(err => {
-    console.error(chalk.red("❌ Erro:"), err.message);
-});
+// Executa só quando rodado via CLI (não em import para testes)
+if (import.meta.url === `file://${process.argv[1]}`) {
+    main().catch((err) => {
+        console.error(chalk.red("❌ Erro:"), err.message);
+        process.exit(1);
+    });
+}
